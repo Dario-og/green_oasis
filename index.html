@@ -1,0 +1,257 @@
+<div style="text-align: center;">
+    <figure>
+      <img src="bilder\dashboard-ende.png" alt="Screenshot 2024-06-24 155956" style="max-width: 50%;">
+      <figcaption>Dashboard</figcaption>
+    </figure>
+    <br>
+    <br>
+</div>
+  
+
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+        <div style="margin-bottom: 0;">Dario Steininger
+          <h1 style="margin-top: 0;">Grüne Oasen Mannheims</h1>
+        </div>
+        <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+         Mannheim ist eine der wärmsten Städte Deutschlands und nach Ludwigshafen auch die am meisten versiegelte Stadt.
+         <br><br>
+         Grünflächen haben einen bekannten kühlenden Effekt, hauptsächlich durch die Verdunstung der in den Pflanzen gespeicherten Feuchtigkeit.
+         Besonders deutlich wird der kühlende Effekt von Grünflächen, wenn sie mit versiegelten Flächen verglichen werden. Das liegt daran, dass diese, anders als die Grünflächen, durch ihre meist dunkleren Farben und Materialien wie Asphalt oder Betonplatten als ein gigantischer Wärmespeicher fungieren.
+         Doch wie stark sind die Temperaturunterschiede der Luft wirklich und wie stark hängen diese mit der direkten Sonneneinstrahlung zusammen? Das sind die Fragen, mit denen sich das Projekt Mannheims grüne Oasen beschäftigen soll.
+         <br><br>
+         <h2>Konzept</h2>
+         Um den Vergleich zwischen Umgebungstemperaturen von Grünflächen und versiegelten Flächen zu ziehen, wird ein Sensornetz benötigt, welches über Daten in einem großflächigen Bereich verfügt. Durch sMArt City Mannheim wird solch ein Netzwerk bereitgestellt und ermöglicht Sensordaten von den benötigten Standorten auszulesen.
+         Die Messstationen erheben neben den Messungen der Temperatur auch Daten zur Intensität der Sonnenstrahlung. Deshalb stellte sich mir die Frage, inwiefern der kühlende Effekt von Grünflächen mit der direkten Sonneneinstrahlung zusammenhängt.
+         Mit dem Vergleich der Umgebungstemperatur von Grünflächen und versiegelten Flächen im Hinblick auf die jeweilige Sonneneinstrahlung konnten 2 Thesen aufgestellt werden:
+         <ol style="text-align: left;">
+             <li>Der kühlende Effekt von Grünflächen wird vor allem in den Nacht- und Abendstunden bemerkbar.</li>
+             <li>Der kühlende Effekt von Grünflächen ist tagsüber sehr gering, da er durch die direkte Sonneneinstrahlung kompensiert wird und die kühlende Wirkung der Evapotranspiration durch erhöhte Verdunstung vermindert wird.</li>
+         </ol>
+         Um die Thesen anschaulich zu belegen, wurde ein Dashboard konzipiert, das die relevanten Daten und Zusammenhänge visualisiert.
+         <br><br>
+         <h2>Daten</h2>
+         Für das Projekt wurden die Datensätze von sMArt City Mannheim gewählt, da diese Daten über die Temperatur, so wie die Sonnenstrahlung und die Geolocation enthalten. Im Vergleich zu den alternativen Datensätze welche online zur Verfügung stehen, bietet sMArt eine wesentlich größere Anzahl an Messstandorten über Mannheim verteilt, was eine bessere Grundlage für eine aussagekräftige Visualisierung darstellt.
+         Die gewählten Tage zur Visualisierung wurden mit Hilfe von AccuWeather ausgewählt und die jeweiligen Tage mithilfe eines zur Verfügung gestellten Jupyter Notebooks zusammengefasst.
+        </div>
+    </div>
+</div>
+  
+<div style="text-align: center;">
+  <figure>
+    <img src="bilder\Jupyter-Notebook.png" alt="Screenshot 2024-06-22 181647"style="max-width: 100%;">
+    <figcaption>(Jupyter-Notebook)</figcaption>
+  </figure>
+  <br>
+  <br>
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <div style="text-align: left; width: 50%;">
+    <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;"></div>
+     <u>Geo-Koordinaten:</u>
+     <br>
+     <br>
+     Neben den CSV-Dateien der einzelnen Tage wird der Metadatenkatalog des Klimanetzes als Excel-Datei genutzt, um die Geo-Koordinaten verwenden zu können. Dazu wurde zunächst eine neue Spalte erstellt in der die Messnetz Nummer und die Stations-ID vereinigt wurden.
+     <br>
+     <br>
+      <u>Visualisierungen:</u>
+     <br>
+      <br>
+      Die Excel-Tablle dient als Basis in Tableau und wird über die Sensor-ID mit den gewählten Tagen verknüpft.
+      Eine Karte in Tableau zeigt die Standorte der Sensoren. Aufgrund der unterschiedlichen Anzahl der Sensoren an versiegelten Flächen und Grünflächen wurden jeweils elf Sensoren pro Gruppe ausgewählt. Ein Balkendiagramm wurde verwendet, um die heißesten und kältesten Sensoren zu identifizieren.
+    </div>
+  </div>
+</div>
+<div style="text-align: center;">
+  <figure>
+    <img src="bilder\Map.png" alt="Screenshot 2024-06-22 181647"style="max-width: 50%;">
+    <figcaption>(Übersichtskarte)</figcaption>
+  </figure>
+  <br>
+  <br>
+</div>
+<div style="text-align: center;">
+  <figure>
+    <img src="bilder\Balken-fuer-map.png"style="max-width: 50%;">
+    <figcaption>(Balkendiagramm der Maximaltemp.)</figcaption>
+  </figure>
+</div>
+  <br>
+  <br>
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+  <h2>Prototyp</h2>
+  <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+    Der erste Prototyp wurde mit Tableau erstellt und zeigt die Temperaturdifferenz der 2 Sensorgruppen über einen Tag.
+    </div>
+  </div>
+</div>
+
+  <div style="text-align: center;">
+    <figure>
+      <img src="bilder\prototyp1.png"style="max-width: 50%;">
+      <figcaption>(gesamter Temperaturverlauf)</figcaption>
+    </figure>
+  </div>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+  Da die Menge an Linien unübersichtlich erscheint, wurde der Durchschnitt der Maximal Temperatur der jeweiligen Gruppen gebildet und als Linie dargestellt.
+    </div>
+  </div>
+</div>
+
+  <div style="text-align: center;">
+    <figure>
+      <img src="bilder\prototyp-2.png"style="max-width: 50%;">
+      <figcaption>(durchschnittlicher Temperarurverlauf)</figcaption>
+    </figure>
+  </div>
+  <br>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+        Um zu verdeutlichen, dass in den Morgen- und Abendstunden wesentlich mehr Sensoren der versiegelten Gruppe im oberen Temperaturbereich liegen, wurde ein zusätzliches Liniendiagramm erstellt, in dem ein einzelner Zeitpunkt auswählbar ist.
+      </div>
+    </div>
+</div>
+
+  <div style="text-align: center;">
+    <figure>
+      <img src="bilder\prototyp-3.png"style="max-width: 50%;">
+      <figcaption>(Liniendiagramm der max. Temperaturen)</figcaption>
+    </figure>
+  </div>
+  <br>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+       Ein Liniendiagrammerwies sich jedoch als ungeeignet, da es die Identifikation der Messstationen erschwerte und die Wahrnehmung der tatsächlichen Messpunkte verzerrte. Daher wurde ein Balkendiagramm als eine bessere Option gewählt.
+      </div>
+  </div>
+</div>
+
+  <div style="text-align: center;">
+    <figure>
+      <img src="bilder\balken.png"style="max-width: 50%;">
+      <figcaption>(Balkendiagramm der max.Temperatur pro Stunde)</figcaption>
+    </figure>
+  </div>
+  <br>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+        Bei der Betrachtung der Daten ist aufgefallen, dass die Temperaturdifferenz sehr stark von der Strahlungsintensität der Sonne abhängt. Deshalb wurde, wusätzlich zu den Temperaturen ein Diagramm zur durchschnittlichen Maximalintensität pro Stunde für die beiden Sensorgruppen ergänzt.
+      </div>
+  </div>
+</div>
+
+  <div style="text-align: center;">
+    <figure>
+      <img src="bilder\doppeldiagramm.png"style="max-width: 50%;">
+      <figcaption>(Doppeldiagramm mit Temp. und Strahlung)</figcaption>
+    </figure>
+  </div>
+  <br>
+  <br>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <h2>Visualisierung</h2>
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+       Für die Visualisierung des Projekts wurden Ideen aus der Vorlesung und aus den Projekten der letzten Jahre gesammelt. Die Visualisierung konzentriert sich auf die Darsstellung der Temperatur- und Sonneneinstrahlungsdaten von Grünflächen und versieglten Flächen in Mannheim. Diese wurde in einem Dashboard auf Tableau erstellt.
+       <br>
+       <br>
+       Um die Temperaturdifferenz der versieglten Flächen und Grünflächen gleichzeitig anzuzeigen, wurden 2 Liniendiagramme erstellt, welche jeweils die beiden Gruppen enthalten. Diese zeigen die jeweiligen Temperaturverläufe und Strahlungswerte der Sensorgruppen. Mit Hilfe unterschiedlicher Färbung der Gruppen, Grau für versiegelte- und Grün für grüne Flächen, ergibt sich in den Diagrammen eine klare optische Trennung die es ermöglicht, die Gemeinsamkeiten und Unterschiede der Daten besser darzustellen.
+       <br>
+       <br>
+       Unterhalb der beiden Liniendiagramme wurde zusätzlich ein Balkendiagramm positioniert, um die Verteilung der Maximaltemperaturen zu einem bestimmten Zeitpunkt übersichtlich darzustellen. Ausgewählt wird der jeweilige Zeitpunkt über einen Schieberegler, welcher ebenfalls die Möglichkeit bietet den gesamten Tagesdurchschnitt darzustellen.
+       <br>
+        <br>
+       Als Vergleich kann über die Symbole am rechten Bildschirmrand zwischen einem heißen, einem kalten und einem mittleren Vergleichstag ausgewählt werden. Hierbei handelt es sich um den kältesten Tag der vorliegenden Datensätze, ebenso wie es sich um den heißesten Tag in den vorliegenden Datensätzen handelt. Als mittlerer Vergleichstag wurde ein Tag gewählt, dessen Temperatur zwischen den beiden anderen Tagen liegt und dessen Strahlungswerte für grüne und versiegelte Flächen sehr ähnlich sind.
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div style="text-align: center;">
+    <iframe width="560" height="315" src="bilder\Tableau - neuneuneu 2024-06-24 18-12-26.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <figcaption>Dein Video-Titel oder Beschreibung</figcaption>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <h2>Implementierung</h2>
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+        Ich entschied mich Tableau für die Implementierung zu verwenden, da wir im Rahmen der Vorlesung bereits umfassende Kenntnisse im Umgang damit erworben hatten und es eine sehr benutzerfreundliche Oberfläche bietet, um komplexe Datensätze einfach zu visualisieren.
+        Da für die Auswahl der Sensoren eine Karte mit den Standorten der Sensoren benötigt wurde, mussten zuerst die Geo-Koordinaten eingebunden werden. Um diese nutzen zu können, wurde zunächst die Excel-Tabelle des Metadatenkatalogs in Tableau integriert. Die gewählten Tage wurden über die Sensor-ID mit der Tabelle verknüpft. Für die einzelnen Tage wurden jeweils zwei CSV-Dateien für die Durchschnittstemperatur und zwei CSV-Dateien für die durchschnittliche Strahlung generiert. Diese CSV-Dateien wurden über die Zeit mit ihrem jeweiligen Tag verknüpft.
+        <br>
+        Die finale Visualisierung wurde mithilfe von drei Dashboards umgesetzt. Hierbei enthält jedes Dashboard die Visualisierung für einen anderen Tag mit den jeweiligen Angaben über Sonnenauf- und Sonnenuntergang sowie dem Schieberegler, um das Balkendiagramm zu steuern. Über die graphischen Steuerelemente welche symbolisch den heißen bzw. kalten oder mittleren (Vergleichs-) Tag darstellen, kann mit einem Klick durch die Dashboards navigiert werden.
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <h2>Erkenntnisse</h2>
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+        Mit Hilfe des Dashboards lassen sich die Zusammenhänge der Temperaturdifferenz mit der Allgemeinen Maximaltemperatur und der Strahlung der Sonne gut erkennen.
+        <br>
+        <br>
+        Wird der heiße Tag betrachtet ist deutlich zu erkennen, dass die Temperaturdifferenz nachts am höchsten ist und Tagsüber hingegen fast überhaupt nicht vorhanden ist. Woran das liegt, ist zu erkennen, wenn der zugehörige Graph der Strahlungswerte betrachtet wird. In der Nacht liegen die Werte der Strahlung auf null was dazu führt, dass die Grünflächen sich schneller abkühlen als die versiegelten Flächen, welche die Wärme des Vorherigen Tages gespeichert haben. Nehmen die Strahlungswerte zu, steigen auch die Temperaturen und die Durchschnittswerte der beiden Temperaturgraphen beginnen leicht zeitverzögert zu der Strahlung zu steigen und sich einander anzunähern. Erst wenn die Werte der Strahlung beginnen zu sinken, entfernen sich die Graphen der Durchschnittstemperatur, ebenfalls leicht zeitversetzt zu den Strahlungswerten, wieder voneinander. Was hierbei auch beachtet werden muss, ist, dass die Strahlungswerte der Grünflächen grundlegend geringer sind, da diese mehr Schattenflächen bieten und durch ihre höhere Albedo das Sonnenlicht reflektieren.
+        <br>
+        <br>
+        Wird nun der kalte Tag betrachtet, fällt ebenfalls auf, dass die Grünflächen die Umgebungstemperatur kühlen, wenn wenig bis gar keine Strahlung vorhanden ist. Es fällt jedoch ebenfalls auf, dass die Grünflächen tagsüber sogar wärmer sind als die versiegelten Flächen. Dies liegt daran, dass die Pflanzen in den kalten Jahreszeiten wesentlich weniger begrünt sind, wodurch ihr Verdunstungseffekt, welcher einen Großteil des kühlenden Effekts verursacht, nur noch sehr bedingt eintritt und sie weniger Schatten bieten. Auch der niedrigere Stand der Sonne ist hier von Bedeutung, da durch diesen ein großer Schattenwurf durch Gebäude auf den versiegelten Flächen verursacht wird und somit die Temperatur dieser erheblich verringert wird.
+        <br>
+        <br>
+        Der Tag mit der mittleren Temperatur dient hier vor allem dem vergleich, da dieser eine maximale Temperatur hat, welche zwischen dem heißen und dem kalten liegt und annähernd gleiche Strahlungswerte von den Grünflächen und versiegelten Flächen aufweist. Wird zum Beispiel den Beginn der Messung betrachtet, so fällt auf, dass die Temperaturen stark voneinander abweichen, da die versiegelten Flächen noch vom vorherigen Tag aufgeheizt sind. Erst ab dem Zeitpunkt, ab dem die Strahlungswerte steigen und einen Wert von 100 w/m2 erreichen, nähern sich die Temperaturen einander an. Im Gegensatz zu den anderen beiden Tagen bleiben die durchschnittlichen Temperaturwerte allerdings annähernd gleich. Dies ist darauf zurückzuführen, dass die Strahlungswerte mit Ausnahme eines zwei Stunden Zeitraumes im Allgemeinen sehr gering sind und daher nicht in der Lage ist, starke Unterschiede in der Absorption der versiegelten und Reflexion der grünen Flächen zu erzeugen. Auch die Kühlung durch Verdunstung tritt hier durch die eher geringen Temperaturen nur bedingt ein.
+        <br>
+        <br>
+        Allgemein geben die jeweiligen Balkendiagramme einen klaren und schnellen Überblick über die Verteilung der Maximaltemperaturen pro Sensor zu einer bestimmten Zeit. Durch die Möglichkeit den Zeitpunkt zu wählen der betrachtet werden soll, wird ermöglicht die Aufgestellte These, dass die Temperaturdifferenz nachts bzw. in den Morgen- und Abendstunden am stärksten ist, vereinfacht dargestellt zu belegen.
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  
+  <div style="display: flex; justify-content: center;">
+    <div style="text-align: left; width: 50%;">
+      <h2>Fazit</h2>
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+        Mit Hilfe der Visualisierungen lassen sich komplexen Zusammenhänge von Temperatur und Strahlung auf versiegelten und begrünten Flächen übersichtlich darstellen so wie über mehrere Tage betrachten.
+        <br>
+        Durch das Dashboard ist es möglich, die beiden Thesen zu belegen und darüber hinaus ist zu erkennen, was die Bedingungen für das Eintreten dieser sind. Es kann auch festgestellt werden, dass es Ausnahmen gibt, auf die die Thesen nur bedingt zutreffen wie anhand des mittleren Tages zu erkennen ist. Das Balkendiagramm ergänzt die Übersicht über die durchschnittliche Tagestemperatur, um die Möglichkeit die Maximaltemperatur der einzelnen Sensoren zu betrachten und bietet somit eine wertvolle Ergänzung. Das Ermöglicht es auch Ausreißer in den Werten auszumachen. Ausreißer sind hier z.B. einzelne Sensoren, die gegensätzlich zu den anderen ihrer Gruppe in der Sonne oder dem Schatten stehen.
+        Zusammengefasst gewährt das Dashboard eine Übersicht über die Zusammenhänge der einzelnen Parameter und zeigt, wie diese sich auf die Temperatur der beiden Gruppen auswirken.
+      </div>
+      <br>
+      <br> 
+      <h2>Ausblick</h2>
+      <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+       Als weitere Ideen für Das Projekt habe ich mir im Laufe der Entwicklung folgendes überlegt:
+       <br>
+       <br>
+       1.	Aufnehmen weiterer Tage 
+       <br>
+       <br>
+       2.	Ergänzung der Wetterlage der einzelnen Tage (Regen, Sonnig, bewölkt)
+       <br>
+        <br>
+        3.	Ergänzung der Luftfeuchtigkeit
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>  
+  
